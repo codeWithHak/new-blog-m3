@@ -7,12 +7,12 @@ import cardData, { ICard } from "@/components/card-data";
 import { useContext, useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea"
-import { useRouter } from "next/router";
+import { useParams } from "next/navigation";
 
 export default function Page() {
   
-  const params  = useRouter();
-  const id = params.query.id
+  const {id}  = useParams<{id:string}>()
+  
 console.log('Resolved Promise ID', id);
 
   interface INewComment {
