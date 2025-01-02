@@ -50,9 +50,9 @@ const {theme,setTheme} = useContext(ThemeContext)!
               <SheetTitle>
                 <Link href={"/"}>Contact</Link>
               </SheetTitle>
-              <SheetTitle>
+              {/* <SheetTitle>
                 <Link href={"/"}>Create Blog</Link>
-              </SheetTitle>
+              </SheetTitle> */}
             </SheetHeader>
           </SheetContent>
         </Sheet>
@@ -89,9 +89,9 @@ const {theme,setTheme} = useContext(ThemeContext)!
         </ul>
 
         <div className="flex gap-4 items-center">
-        <Link href="/" className="hidden lg:flex font-workSans">
+        {/* <Link href="/" className="hidden lg:flex font-workSans">
           Create Blog
-        </Link>
+        </Link> */}
         <Button className="mr-2 sm:mr-0" variant={'secondary'} size={'sm'} onClick={toggleTheme}>{theme.text}</Button>
         </div>
       </div>
