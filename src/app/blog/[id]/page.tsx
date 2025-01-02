@@ -51,7 +51,7 @@ console.log('Resolved Promise ID', id);
       color:theme.color
     }}>
     <div
-    className="w-[90%] md:w-3/5 mx-auto p-10 font-workSans">
+    className="w-full md:w-3/5 mx-auto p-10 font-workSans">
       {blog && (
         <div className="flex flex-col gap-4 items-start" key={blog.id}>
           <Button>{blog.tag}</Button>

@@ -13,13 +13,7 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 
 function Navbar() {
-  // const [theme,setTheme] = useState({
-  //   text:'Light',
-  //   color:"white",
-  //   bg:'black',
-  // })
-
-
+  
 const {theme,setTheme} = useContext(ThemeContext)!
   
   const toggleTheme = ()=>{

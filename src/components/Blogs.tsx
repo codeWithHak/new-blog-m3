@@ -12,7 +12,7 @@ function Blogs() {
       color:theme.color
     }}>
     <div
-       className='w-[90%] md:w-4/5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pb-20 md:pt-20 pt-10'>
+       className='w-[90%] md:w-4/5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pb-20 pt-20'>
         {cardData.map((data,index)=>(
             <Card key={index} id={data.id} image={data.image} title={data.title} tag={data.tag} date={data.date} author={data.date}/>))}
         </div>
