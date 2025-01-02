@@ -1,6 +1,6 @@
 'use client'
 import ThemeContext from "@/app/context/ThemeContext";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, } from "react";
 import { Menu } from "lucide-react";
 import {
   Sheet,
@@ -9,7 +9,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
 
