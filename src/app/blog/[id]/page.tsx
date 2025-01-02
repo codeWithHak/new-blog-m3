@@ -7,9 +7,12 @@ import cardData, { ICard } from "@/components/card-data";
 import { useContext, useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea"
+import { useRouter } from "next/router";
 
+export default  function Page() {
+  const params = useRouter()
+  const id  = params.query.id
 
-export default function Page({ params }: { params: { id: string } }) {
   interface INewComment {
     name: string;
     comment: string;
@@ -24,7 +27,6 @@ export default function Page({ params }: { params: { id: string } }) {
   });
   const [comments, setComments] = useState<INewComment[]>([]);
 
-  const { id } = params;
   useEffect(() => {
     const findBlog = cardData.find((blog) => blog.id === id);
     setBlog(findBlog);
