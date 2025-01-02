@@ -1,13 +1,16 @@
+import Blogs from "@/components/Blogs";
 import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
-import Image from "next/image";
+import React, { useContext } from "react";
 
 export default function Home() {
   return (
-   <div className="">
-    <Navbar/>
+
+    <div>
     <Hero/>
-   </div>
+    <Blogs/>
+    </div>
+    
+
   );
 }
 

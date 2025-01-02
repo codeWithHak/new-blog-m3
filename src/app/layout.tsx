@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import ThemeContextProvider from "./context/ThemeContextProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,13 +25,26 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
+  
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+
+{/* // Kindly remember to fix the jugaads you did whole app is client sided rn 
+// make it server sided and find a way to use context api without making the whole app client sided
+//  also pass metadta it is commented rn */}
+
+        <ThemeContextProvider>
+        <Navbar/>
         {children}
+        <Footer/>
+        </ThemeContextProvider>
       </body>
     </html>
   );
 }
+ 
