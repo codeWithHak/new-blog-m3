@@ -90,8 +90,8 @@ export default function Page({ params }: { params: { id: string } }) {
                 Respond
               </Button>
               {comments.length!== 0 && (<h2 className="text-3xl pt-8">Comments</h2>)}
-              {comments.map((comment) => (
-                <div className="p-2 ">
+              {comments.map((comment,index) => (
+                <div className="p-2 " key={index}>
                 <p className="pt-2">{comment.name} said:</p>
                 <p className="pt-1">{comment.comment}</p>
                 </div>
