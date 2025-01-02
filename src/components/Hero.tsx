@@ -17,6 +17,9 @@ function Hero() {
         alt="Hero"
         fill
         quality={100}
+        priority
+        // placeholder="blur"
+        // blurDataURL="/images/hero-bg.png"
         className="hidden md:block object-cover absolute top-0 left-0"
       ></Image>
       <div className="md:absolute -bottom-10 left-10 ">
